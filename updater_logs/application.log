@@ -96,3 +96,167 @@ java.nio.file.NoSuchFileException: C:\Users\vitthals\Desktop\Sameer\Updater\targ
 2025-03-16 21:41:43[main][INFO ]com.sam.updater.CheckForUpdate-Backup failed since Source file does not exist: C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar
 2025-03-16 21:41:43[main][WARN ]com.sam.updater.CheckForUpdate-Rename failed since Original file does not exist: C:\Users\vitthals\Desktop\Sameer\Updater\target\old.jar
 2025-03-16 21:41:43[main][INFO ]com.sam.updater.CheckForUpdate-JAR file is starting...
+2025-03-16 22:10:09[main][INFO ]com.sam.updater.CheckForUpdate-loading  xml file from server URL: http://localhost:9090/updates/product
+2025-03-16 22:10:09[main][ERROR]com.sam.updater.CheckForUpdate-Failed to connect to the server. Response code: 500
+2025-03-16 22:10:09[main][ERROR]com.sam.updater.CheckForUpdate-The file does not exist at: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-16 22:10:09[main][INFO ]com.sam.updater.CheckForUpdate-checking if new updates are available URL: http://localhost:9090/updates/product
+2025-03-16 22:10:09[main][ERROR]com.sam.updater.CheckForUpdate-Failed to connect to the server. Response code: 500
+2025-03-16 22:10:09[main][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-16 22:10:09[main][ERROR]com.sam.updater.CheckForUpdate-Error reading the file
+java.nio.file.NoSuchFileException: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:236)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:380)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:432)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:422)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:160)
+	at com.sam.updater.CheckForUpdate.loadLocalUpdateMetaData(CheckForUpdate.java:202)
+	at com.sam.updater.CheckForUpdate.checkIfUpdateAvailable(CheckForUpdate.java:229)
+	at com.sam.Main.main(Main.java:15)
+2025-03-16 22:12:29[main][INFO ]com.sam.updater.CheckForUpdate-loading  xml file from server URL: http://localhost:9090/updates/product
+2025-03-16 22:12:29[main][ERROR]com.sam.updater.CheckForUpdate-Failed to connect to the server. Response code: 500
+2025-03-16 22:12:29[main][ERROR]com.sam.updater.CheckForUpdate-The file does not exist at: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-16 22:12:29[main][INFO ]com.sam.updater.CheckForUpdate-checking if new updates are available URL: http://localhost:9090/updates/product
+2025-03-16 22:12:30[main][ERROR]com.sam.updater.CheckForUpdate-Failed to connect to the server. Response code: 500
+2025-03-16 22:12:30[main][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-16 22:12:30[main][ERROR]com.sam.updater.CheckForUpdate-Error reading the file
+java.nio.file.NoSuchFileException: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:236)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:380)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:432)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:422)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:160)
+	at com.sam.updater.CheckForUpdate.loadLocalUpdateMetaData(CheckForUpdate.java:202)
+	at com.sam.updater.CheckForUpdate.checkIfUpdateAvailable(CheckForUpdate.java:229)
+	at com.sam.Main.main(Main.java:15)
+2025-03-16 22:19:05[main][INFO ]com.sam.updater.CheckForUpdate-loading  xml file from server URL: http://localhost:9090/updates/product
+2025-03-16 22:19:05[main][ERROR]com.sam.updater.CheckForUpdate-Failed to connect to the server. Response code: 500
+2025-03-16 22:19:05[main][ERROR]com.sam.updater.CheckForUpdate-The file does not exist at: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-16 22:19:05[main][INFO ]com.sam.updater.CheckForUpdate-checking if new updates are available URL: http://localhost:9090/updates/product
+2025-03-16 22:19:05[main][ERROR]com.sam.updater.CheckForUpdate-Failed to connect to the server. Response code: 500
+2025-03-16 22:19:05[main][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-16 22:19:05[main][ERROR]com.sam.updater.CheckForUpdate-Error reading the file
+java.nio.file.NoSuchFileException: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:236)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:380)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:432)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:422)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:160)
+	at com.sam.updater.CheckForUpdate.loadLocalUpdateMetaData(CheckForUpdate.java:202)
+	at com.sam.updater.CheckForUpdate.checkIfUpdateAvailable(CheckForUpdate.java:229)
+	at com.sam.Main.main(Main.java:15)
+2025-03-16 22:22:05[main][INFO ]com.sam.updater.CheckForUpdate-loading  xml file from server URL: http://localhost:9090/updates/product
+2025-03-16 22:22:06[main][ERROR]com.sam.updater.CheckForUpdate-Failed to connect to the server. Response code: 500
+2025-03-16 22:22:06[main][ERROR]com.sam.updater.CheckForUpdate-The file does not exist at: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-16 22:22:06[main][INFO ]com.sam.updater.CheckForUpdate-checking if new updates are available URL: http://localhost:9090/updates/product
+2025-03-16 22:22:06[main][ERROR]com.sam.updater.CheckForUpdate-Failed to connect to the server. Response code: 500
+2025-03-16 22:22:06[main][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-16 22:22:06[main][ERROR]com.sam.updater.CheckForUpdate-Error reading the file
+java.nio.file.NoSuchFileException: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:236)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:380)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:432)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:422)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:160)
+	at com.sam.updater.CheckForUpdate.loadLocalUpdateMetaData(CheckForUpdate.java:202)
+	at com.sam.updater.CheckForUpdate.checkIfUpdateAvailable(CheckForUpdate.java:229)
+	at com.sam.Main.main(Main.java:15)
+2025-03-16 22:26:57[main][INFO ]com.sam.updater.CheckForUpdate-loading  xml file from server URL: http://localhost:9090/updates/product
+2025-03-16 22:26:57[main][ERROR]com.sam.updater.CheckForUpdate-Failed to connect to the server. Response code: 500
+2025-03-16 22:26:57[main][ERROR]com.sam.updater.CheckForUpdate-The file does not exist at: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-16 22:26:57[main][INFO ]com.sam.updater.CheckForUpdate-checking if new updates are available URL: http://localhost:9090/updates/product
+2025-03-16 22:26:57[main][ERROR]com.sam.updater.CheckForUpdate-Failed to connect to the server. Response code: 500
+2025-03-16 22:26:57[main][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-16 22:26:57[main][ERROR]com.sam.updater.CheckForUpdate-Error reading the file
+java.nio.file.NoSuchFileException: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:236)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:380)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:432)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:422)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:160)
+	at com.sam.updater.CheckForUpdate.loadLocalUpdateMetaData(CheckForUpdate.java:202)
+	at com.sam.updater.CheckForUpdate.checkIfUpdateAvailable(CheckForUpdate.java:229)
+	at com.sam.Main.main(Main.java:15)
+2025-03-16 22:28:09[main][INFO ]com.sam.updater.CheckForUpdate-loading  xml file from server URL: http://localhost:9090/updates/product
+2025-03-16 22:28:09[main][ERROR]com.sam.updater.CheckForUpdate-Failed to connect to the server. Response code: 500
+2025-03-16 22:28:09[main][ERROR]com.sam.updater.CheckForUpdate-The file does not exist at: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-16 22:28:09[main][INFO ]com.sam.updater.CheckForUpdate-checking if new updates are available URL: http://localhost:9090/updates/product
+2025-03-16 22:28:09[main][ERROR]com.sam.updater.CheckForUpdate-Failed to connect to the server. Response code: 500
+2025-03-16 22:28:09[main][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-16 22:28:09[main][ERROR]com.sam.updater.CheckForUpdate-Error reading the file
+java.nio.file.NoSuchFileException: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:236)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:380)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:432)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:422)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:160)
+	at com.sam.updater.CheckForUpdate.loadLocalUpdateMetaData(CheckForUpdate.java:202)
+	at com.sam.updater.CheckForUpdate.checkIfUpdateAvailable(CheckForUpdate.java:229)
+	at com.sam.Main.main(Main.java:15)
+2025-03-16 22:29:41[main][INFO ]com.sam.updater.CheckForUpdate-loading  xml file from server URL: http://localhost:9090/updates/product
+2025-03-16 22:29:41[main][ERROR]com.sam.updater.CheckForUpdate-Failed to connect to the server. Response code: 500
+2025-03-16 22:29:41[main][ERROR]com.sam.updater.CheckForUpdate-The file does not exist at: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-16 22:29:41[main][INFO ]com.sam.updater.CheckForUpdate-checking if new updates are available URL: http://localhost:9090/updates/product
+2025-03-16 22:29:41[main][ERROR]com.sam.updater.CheckForUpdate-Failed to connect to the server. Response code: 500
+2025-03-16 22:29:41[main][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-16 22:29:41[main][ERROR]com.sam.updater.CheckForUpdate-Error reading the file
+java.nio.file.NoSuchFileException: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:236)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:380)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:432)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:422)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:160)
+	at com.sam.updater.CheckForUpdate.loadLocalUpdateMetaData(CheckForUpdate.java:202)
+	at com.sam.updater.CheckForUpdate.checkIfUpdateAvailable(CheckForUpdate.java:229)
+	at com.sam.Main.main(Main.java:15)
+2025-03-16 22:31:21[main][INFO ]com.sam.updater.CheckForUpdate-loading  xml file from server URL: http://localhost:9090/updates/product
+2025-03-16 22:31:21[main][ERROR]com.sam.updater.CheckForUpdate-The file does not exist at: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-16 22:31:21[main][INFO ]com.sam.updater.CheckForUpdate-checking if new updates are available URL: http://localhost:9090/updates/product
+2025-03-16 22:31:21[main][INFO ]com.sam.updater.CheckForUpdate-Created missing directories at: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData
+2025-03-16 22:31:21[main][INFO ]com.sam.updater.CheckForUpdate-update xml directory path path:C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-16 22:31:21[main][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-16 22:31:21[main][INFO ]com.sam.updater.CheckForUpdate-Application is already up to date.......... 
+2025-03-16 22:31:21[main][INFO ]com.sam.updater.CheckForUpdate-Local hash: 38293698203971db80a890c988a068f6ad3372c53e36c834cd1c0e70179345ba   Server hash:38293698203971db80a890c988a068f6ad3372c53e36c834cd1c0e70179345ba
+2025-03-16 22:31:21[main][INFO ]com.sam.updater.CheckForUpdate-Taking backup: currentLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar, backupLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\bkp\Test2-Updated.jar
+2025-03-16 22:31:21[main][INFO ]com.sam.updater.CheckForUpdate-Backup failed since Source file does not exist: C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar
+2025-03-16 22:31:21[main][WARN ]com.sam.updater.CheckForUpdate-Rename failed since Original file does not exist: C:\Users\vitthals\Desktop\Sameer\Updater\target\old.jar
+2025-03-16 22:31:21[main][INFO ]com.sam.updater.CheckForUpdate-JAR file is starting...
+2025-03-16 22:34:05[main][INFO ]com.sam.updater.CheckForUpdate-loading  xml file from server URL: http://localhost:9090/updates/product
+2025-03-16 22:34:05[main][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-16 22:34:05[main][INFO ]com.sam.updater.CheckForUpdate-New Update available............
+2025-03-16 22:34:05[main][INFO ]com.sam.updater.CheckForUpdate-Local hash: 3829369803971db80a890c988a068f6ad3372c53e36c834cd1c0e70179345ba   Server hash:38293698203971db80a890c988a068f6ad3372c53e36c834cd1c0e70179345ba
+2025-03-16 22:34:05[main][INFO ]com.sam.updater.CheckForUpdate-Taking backup: currentLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar, backupLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\bkp\Test2-Updated.jar
+2025-03-16 22:34:05[main][INFO ]com.sam.updater.CheckForUpdate-Backup failed since Source file does not exist: C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar
+2025-03-16 22:34:05[main][WARN ]com.sam.updater.CheckForUpdate-Rename failed since Original file does not exist: C:\Users\vitthals\Desktop\Sameer\Updater\target\old.jar
+2025-03-16 22:34:05[main][INFO ]com.sam.updater.CheckForUpdate-JAR file is starting...
+2025-03-16 22:40:01[main][INFO ]com.sam.updater.CheckForUpdate-loading  xml file from server URL: http://localhost:9090/updates/product
+2025-03-16 22:40:01[main][ERROR]com.sam.updater.CheckForUpdate-The file does not exist at: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-16 22:40:01[main][INFO ]com.sam.updater.CheckForUpdate-checking if new updates are available URL: http://localhost:9090/updates/product
+2025-03-16 22:40:01[main][INFO ]com.sam.updater.CheckForUpdate-update xml directory path path:C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-16 22:40:01[main][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-16 22:40:01[main][INFO ]com.sam.updater.CheckForUpdate-Application is already up to date.......... 
+2025-03-16 22:40:01[main][INFO ]com.sam.updater.CheckForUpdate-Local hash: 38293698203971db80a890c988a068f6ad3372c53e36c834cd1c0e70179345ba   Server hash:38293698203971db80a890c988a068f6ad3372c53e36c834cd1c0e70179345ba
+2025-03-16 22:40:01[main][INFO ]com.sam.updater.CheckForUpdate-Taking backup: currentLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar, backupLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\bkp\Test2-Updated.jar
+2025-03-16 22:40:01[main][INFO ]com.sam.updater.CheckForUpdate-Backup failed since Source file does not exist: C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar
+2025-03-16 22:40:01[main][WARN ]com.sam.updater.CheckForUpdate-Rename failed since Original file does not exist: C:\Users\vitthals\Desktop\Sameer\Updater\target\old.jar
+2025-03-16 22:40:01[main][INFO ]com.sam.updater.CheckForUpdate-JAR file is starting...

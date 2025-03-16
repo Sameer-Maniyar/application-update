@@ -11,13 +11,20 @@ public class UpdateMetaData {
 
     private String versionNumber;
 
+    private Boolean isUpdatedJarDownloaded;
+    private Boolean applyUpdate;
+    private Boolean download;
+
     public UpdateMetaData() {}
 
 
-    public UpdateMetaData(String fileName, String checkSum, String versionNumber) {
+    public UpdateMetaData(String fileName, String checkSum, String versionNumber, Boolean isUpdatedJarDownloaded, Boolean applyUpdate, Boolean download) {
         this.fileName = fileName;
         this.checkSum = checkSum;
         this.versionNumber = versionNumber;
+        this.isUpdatedJarDownloaded = isUpdatedJarDownloaded;
+        this.applyUpdate = applyUpdate;
+        this.download = download;
     }
 
     @XmlElement
@@ -47,12 +54,44 @@ public class UpdateMetaData {
         this.versionNumber = versionNumber;
     }
 
+
+    @XmlElement
+    public Boolean getUpdatedJarDownloaded() {
+        return isUpdatedJarDownloaded;
+    }
+
+    public void setUpdatedJarDownloaded(Boolean updatedJarDownloaded) {
+        isUpdatedJarDownloaded = updatedJarDownloaded;
+    }
+
+    @XmlElement
+    public Boolean getApplyUpdate() {
+        return applyUpdate;
+    }
+
+    public void setApplyUpdate(Boolean applyUpdate) {
+        this.applyUpdate = applyUpdate;
+    }
+
+    @XmlElement
+    public Boolean getDownload() {
+        return download;
+    }
+
+    public void setDownload(Boolean download) {
+        this.download = download;
+    }
+
+
     @Override
     public String toString() {
         return "UpdateMetaData{" +
                 "fileName='" + fileName + '\'' +
                 ", checkSum='" + checkSum + '\'' +
                 ", versionNumber='" + versionNumber + '\'' +
+                ", isUpdatedJarDownloaded=" + isUpdatedJarDownloaded +
+                ", applyUpdate=" + applyUpdate +
+                ", download=" + download +
                 '}';
     }
 
