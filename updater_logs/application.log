@@ -1,5 +1,5 @@
-2025-03-16 19:42:33[main][INFO ]com.setmech.updater.CheckForUpdate-loading  xml file from server URL: http://localhost:9090/updates/product
-2025-03-16 19:42:33[main][ERROR]com.setmech.updater.CheckForUpdate-I/O error occurred while connecting to URL: http://localhost:9090/updates/product
+2025-03-16 19:42:33[main][INFO ]com.sam.updater.CheckForUpdate-loading  xml file from server URL: http://localhost:9090/updates/product
+2025-03-16 19:42:33[main][ERROR]com.sam.updater.CheckForUpdate-I/O error occurred while connecting to URL: http://localhost:9090/updates/product
 java.net.ConnectException: Connection refused: connect
 	at java.base/sun.nio.ch.Net.connect0(Native Method)
 	at java.base/sun.nio.ch.Net.connect(Net.java:579)
@@ -20,12 +20,12 @@ java.net.ConnectException: Connection refused: connect
 	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1702)
 	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1626)
 	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:529)
-	at com.setmech.updater.CheckForUpdate.loadCurrentUpdateMetaDataFromServer(CheckForUpdate.java:210)
-	at com.setmech.updater.CheckForUpdate.checkIfUpdateAvailable(CheckForUpdate.java:179)
-	at com.setmech.Main.main(Main.java:13)
-2025-03-16 19:42:33[main][ERROR]com.setmech.updater.CheckForUpdate-The file does not exist at: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
-2025-03-16 19:42:33[main][INFO ]com.setmech.updater.CheckForUpdate-checking if new updates are available URL: http://localhost:9090/updates/product
-2025-03-16 19:42:33[main][ERROR]com.setmech.updater.CheckForUpdate-I/O error occurred while connecting to URL: http://localhost:9090/updates/product
+	at com.sam.updater.CheckForUpdate.loadCurrentUpdateMetaDataFromServer(CheckForUpdate.java:210)
+	at com.sam.updater.CheckForUpdate.checkIfUpdateAvailable(CheckForUpdate.java:179)
+	at com.sam.Main.main(Main.java:13)
+2025-03-16 19:42:33[main][ERROR]com.sam.updater.CheckForUpdate-The file does not exist at: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-16 19:42:33[main][INFO ]com.sam.updater.CheckForUpdate-checking if new updates are available URL: http://localhost:9090/updates/product
+2025-03-16 19:42:33[main][ERROR]com.sam.updater.CheckForUpdate-I/O error occurred while connecting to URL: http://localhost:9090/updates/product
 java.net.ConnectException: Connection refused: connect
 	at java.base/sun.nio.ch.Net.connect0(Native Method)
 	at java.base/sun.nio.ch.Net.connect(Net.java:579)
@@ -46,12 +46,12 @@ java.net.ConnectException: Connection refused: connect
 	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1702)
 	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1626)
 	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:529)
-	at com.setmech.updater.CheckForUpdate.downloadXmlFileFromServer(CheckForUpdate.java:63)
-	at com.setmech.updater.CheckForUpdate.loadLocalUpdateMetaData(CheckForUpdate.java:147)
-	at com.setmech.updater.CheckForUpdate.checkIfUpdateAvailable(CheckForUpdate.java:180)
-	at com.setmech.Main.main(Main.java:13)
-2025-03-16 19:42:33[main][INFO ]com.setmech.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
-2025-03-16 19:42:33[main][ERROR]com.setmech.updater.CheckForUpdate-Error reading the file
+	at com.sam.updater.CheckForUpdate.downloadXmlFileFromServer(CheckForUpdate.java:63)
+	at com.sam.updater.CheckForUpdate.loadLocalUpdateMetaData(CheckForUpdate.java:147)
+	at com.sam.updater.CheckForUpdate.checkIfUpdateAvailable(CheckForUpdate.java:180)
+	at com.sam.Main.main(Main.java:13)
+2025-03-16 19:42:33[main][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-16 19:42:33[main][ERROR]com.sam.updater.CheckForUpdate-Error reading the file
 java.nio.file.NoSuchFileException: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
 	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
 	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
@@ -61,6 +61,6 @@ java.nio.file.NoSuchFileException: C:\Users\vitthals\Desktop\Sameer\Updater\targ
 	at java.base/java.nio.file.Files.newByteChannel(Files.java:432)
 	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:422)
 	at java.base/java.nio.file.Files.newInputStream(Files.java:160)
-	at com.setmech.updater.CheckForUpdate.loadLocalUpdateMetaData(CheckForUpdate.java:153)
-	at com.setmech.updater.CheckForUpdate.checkIfUpdateAvailable(CheckForUpdate.java:180)
-	at com.setmech.Main.main(Main.java:13)
+	at com.sam.updater.CheckForUpdate.loadLocalUpdateMetaData(CheckForUpdate.java:153)
+	at com.sam.updater.CheckForUpdate.checkIfUpdateAvailable(CheckForUpdate.java:180)
+	at com.sam.Main.main(Main.java:13)

@@ -1,4 +1,4 @@
-package com.setmech.updater;
+package com.sam.updater;
 
 
 import javafx.concurrent.Task;

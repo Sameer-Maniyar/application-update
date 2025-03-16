@@ -1,6 +1,6 @@
-package com.setmech;
+package com.sam;
 
-import com.setmech.updater.CheckForUpdate;
+import com.sam.updater.CheckForUpdate;
 import jakarta.xml.bind.JAXBException;
 
 import java.io.IOException;

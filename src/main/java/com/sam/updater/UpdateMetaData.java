@@ -1,4 +1,4 @@
-package com.setmech.updater;
+package com.sam.updater;
 
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
