@@ -64,3 +64,12 @@ java.nio.file.NoSuchFileException: C:\Users\vitthals\Desktop\Sameer\Updater\targ
 	at com.sam.updater.CheckForUpdate.loadLocalUpdateMetaData(CheckForUpdate.java:153)
 	at com.sam.updater.CheckForUpdate.checkIfUpdateAvailable(CheckForUpdate.java:180)
 	at com.sam.Main.main(Main.java:13)
+2025-03-16 20:14:11[main][INFO ]com.sam.updater.CheckForUpdate-Taking backup currentLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\Teawizzard backupLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\targetbkp\Teawizzard.backup 
+2025-03-16 20:16:06[main][INFO ]com.sam.updater.CheckForUpdate-Taking backup currentLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar backupLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\targetbkp\Test2-Updated.jar.backup 
+2025-03-16 20:17:12[main][INFO ]com.sam.updater.CheckForUpdate-Taking backup currentLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar backupLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\bkp\Test2-Updated.jar.backup 
+2025-03-16 20:17:56[main][INFO ]com.sam.updater.CheckForUpdate-Taking backup currentLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar backupLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\bkp\Test2-Updated.jar 
+2025-03-16 20:21:17[main][INFO ]com.sam.updater.CheckForUpdate-Taking backup: currentLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar backupLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\bkp\Test2-Updated.jar
+2025-03-16 20:21:17[main][INFO ]com.sam.updater.CheckForUpdate-Backup is successful...
+2025-03-16 20:38:32[main][INFO ]com.sam.updater.CheckForUpdate-Taking backup: currentLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar backupLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\bkp\Test2-Updated.jar
+2025-03-16 20:38:32[main][INFO ]com.sam.updater.CheckForUpdate-Backup is successful...
+2025-03-16 20:40:00[main][INFO ]com.sam.updater.CheckForUpdate-Taking backup: currentLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar, backupLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\bkp\Test2-Updated.jar

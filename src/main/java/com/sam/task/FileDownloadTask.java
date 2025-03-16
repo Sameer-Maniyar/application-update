@@ -1,4 +1,4 @@
-package com.sam.updater;
+package com.sam.task;
 
 
 import javafx.concurrent.Task;

@@ -1,5 +1,7 @@
 package com.sam.updater;
 
+import com.sam.dto.UpdateMetaData;
+import com.sam.task.FileDownloadTask;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Unmarshaller;
@@ -7,11 +9,9 @@ import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.ByteArrayInputStream;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
-import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.UnknownHostException;
 import java.nio.file.*;
@@ -33,7 +33,7 @@ public class CheckForUpdate {
     static String LOCAL_JAR = "";
     static String TEMP_JAR = "";
 
-    private static void replaceJar() throws IOException, IOException {
+    private void replaceJar() throws IOException, IOException {
         Path oldJar = Paths.get(LOCAL_JAR);
         Path newJar = Paths.get(TEMP_JAR);
 
@@ -47,10 +47,42 @@ public class CheckForUpdate {
     }
 
 
+    public void takeBackup(String currentLocation, String backupLocation, String fileName) throws IOException {
+        // Create Path objects for the current file and the backup location
+        Path currentLocationPath = Paths.get(currentLocation, fileName);
+        Path backupLocationPath = Paths.get(backupLocation, fileName);
+
+        // Log the backup operation
+        log.info("Taking backup: currentLocationPath : {}, backupLocationPath : {}", currentLocationPath, backupLocationPath);
+
+        // Ensure that the source file exists
+        if (!Files.exists(currentLocationPath)) {
+            throw new IOException("Source file does not exist: " + currentLocationPath);
+        }
+
+        // Ensure that the backup location is valid (e.g., the directory exists)
+        if (!Files.exists(backupLocationPath.getParent())) {
+            // Create the parent directories if they do not exist
+            Files.createDirectories(backupLocationPath.getParent());
+        }
+
+        try {
+            // Backup old file before replacing
+            Files.move(currentLocationPath, backupLocationPath, StandardCopyOption.REPLACE_EXISTING);
+            log.info("Backup is successful...");
+        } catch (IOException e) {
+            // Log any error that occurs during backup
+            log.error("Backup failed due to error: ", e);
+            throw e;  // Rethrow the exception to propagate it
+        }
+
+
+    }
+
+
     public void downloadXmlFileFromServer() {
 
         try {
-
 
             log.info("checking if new updates are available URL: {}", URL);
 
@@ -98,32 +130,10 @@ public class CheckForUpdate {
     }
 
 
-    private String getCurrentDirectory() throws IOException {
-
-
-        File classFile = null;
-        try {
-            classFile = new File(CheckForUpdate.class
-                    .getProtectionDomain()
-                    .getCodeSource()
-                    .getLocation()
-                    .toURI());
-        } catch (URISyntaxException e) {
-
-            throw new RuntimeException(e);
-        }
-
-        String directoryPath = classFile.getParentFile().getAbsolutePath();
-
-
-        return directoryPath;
-
-    }
-
     private String getMetaDataFolderPath() throws IOException {
 
 
-        Path parentDir = Path.of(getCurrentDirectory(), UPDATE_METADATA_FOLDER_PATH);
+        Path parentDir = Path.of(DirectoryUtil.getCurrentDirectory(), UPDATE_METADATA_FOLDER_PATH);
 
         if (Files.notExists(parentDir)) {
             Files.createDirectories(parentDir);  // Create directories if they do not exist
@@ -139,7 +149,7 @@ public class CheckForUpdate {
 
 
         UpdateMetaData updateMetaData = null;
-        Path parentDir = Path.of(getCurrentDirectory(), UPDATE_METADATA_FOLDER_PATH, XML_FILE_NAME);
+        Path parentDir = Path.of(DirectoryUtil.getCurrentDirectory(), UPDATE_METADATA_FOLDER_PATH, XML_FILE_NAME);
 
 
         if (!Files.exists(parentDir)) {
@@ -187,7 +197,7 @@ public class CheckForUpdate {
             log.info("Application is already up to date.......... ");
         }
 
-        log.info("Local hash: {}   Server hash:{}",localUpdateMetaData.getCheckSum(),serverUpdateMetaData.getCheckSum());
+        log.info("Local hash: {}   Server hash:{}", localUpdateMetaData.getCheckSum(), serverUpdateMetaData.getCheckSum());
 
         return true;
     }
