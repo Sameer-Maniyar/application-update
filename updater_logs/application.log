@@ -73,3 +73,26 @@ java.nio.file.NoSuchFileException: C:\Users\vitthals\Desktop\Sameer\Updater\targ
 2025-03-16 20:38:32[main][INFO ]com.sam.updater.CheckForUpdate-Taking backup: currentLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar backupLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\bkp\Test2-Updated.jar
 2025-03-16 20:38:32[main][INFO ]com.sam.updater.CheckForUpdate-Backup is successful...
 2025-03-16 20:40:00[main][INFO ]com.sam.updater.CheckForUpdate-Taking backup: currentLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar, backupLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\bkp\Test2-Updated.jar
+2025-03-16 21:24:08[main][INFO ]com.sam.updater.CheckForUpdate-Taking backup: currentLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar, backupLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\bkp\Test2-Updated.jar
+2025-03-16 21:26:00[main][INFO ]com.sam.updater.CheckForUpdate-Taking backup: currentLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar, backupLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\bkp\Test2-Updated.jar
+2025-03-16 21:26:00[main][INFO ]com.sam.updater.CheckForUpdate-Source file does not exist: C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar
+2025-03-16 21:26:00[main][INFO ]com.sam.updater.CheckForUpdate-File renamed successfully from old.jar to new.jar
+2025-03-16 21:26:02[main][INFO ]com.sam.updater.CheckForUpdate-Taking backup: currentLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar, backupLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\bkp\Test2-Updated.jar
+2025-03-16 21:26:02[main][INFO ]com.sam.updater.CheckForUpdate-Source file does not exist: C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar
+2025-03-16 21:27:23[main][INFO ]com.sam.updater.CheckForUpdate-Taking backup: currentLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar, backupLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\bkp\Test2-Updated.jar
+2025-03-16 21:27:23[main][INFO ]com.sam.updater.CheckForUpdate-Source file does not exist: C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar
+2025-03-16 21:27:23[main][INFO ]com.sam.updater.CheckForUpdate-File renamed successfully from old.jar to new.jar
+2025-03-16 21:37:33[main][INFO ]com.sam.updater.CheckForUpdate-Taking backup: currentLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar, backupLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\bkp\Test2-Updated.jar
+2025-03-16 21:37:33[main][INFO ]com.sam.updater.CheckForUpdate-Source file does not exist: C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar
+2025-03-16 21:37:33[main][WARN ]com.sam.updater.CheckForUpdate-Original file does not exist: C:\Users\vitthals\Desktop\Sameer\Updater\target\old.jar
+2025-03-16 21:37:33[main][INFO ]com.sam.updater.CheckForUpdate-JAR file is starting...
+2025-03-16 21:37:43[main][INFO ]com.sam.updater.CheckForUpdate-Process finished with exit code: 0
+2025-03-16 21:40:02[main][INFO ]com.sam.updater.CheckForUpdate-Taking backup: currentLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar, backupLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\bkp\Test2-Updated.jar
+2025-03-16 21:40:02[main][INFO ]com.sam.updater.CheckForUpdate-Backup failed since Source file does not exist: C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar
+2025-03-16 21:40:02[main][WARN ]com.sam.updater.CheckForUpdate-Rename failed since Original file does not exist: C:\Users\vitthals\Desktop\Sameer\Updater\target\old.jar
+2025-03-16 21:40:02[main][INFO ]com.sam.updater.CheckForUpdate-JAR file is starting...
+2025-03-16 21:40:06[main][INFO ]com.sam.updater.CheckForUpdate-Process finished with exit code: 0
+2025-03-16 21:41:43[main][INFO ]com.sam.updater.CheckForUpdate-Taking backup: currentLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar, backupLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\bkp\Test2-Updated.jar
+2025-03-16 21:41:43[main][INFO ]com.sam.updater.CheckForUpdate-Backup failed since Source file does not exist: C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar
+2025-03-16 21:41:43[main][WARN ]com.sam.updater.CheckForUpdate-Rename failed since Original file does not exist: C:\Users\vitthals\Desktop\Sameer\Updater\target\old.jar
+2025-03-16 21:41:43[main][INFO ]com.sam.updater.CheckForUpdate-JAR file is starting...

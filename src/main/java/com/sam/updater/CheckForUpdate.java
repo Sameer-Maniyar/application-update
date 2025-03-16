@@ -30,20 +30,56 @@ public class CheckForUpdate {
     }
 
 
-    static String LOCAL_JAR = "";
-    static String TEMP_JAR = "";
+    public void renameUpdatedApp(String currentLocation, String oldFileName, String newFileName) throws IOException {
+        Path oldFilePath = Paths.get(currentLocation, oldFileName);
+        Path newFilePath = Paths.get(currentLocation, newFileName);
 
-    private void replaceJar() throws IOException, IOException {
-        Path oldJar = Paths.get(LOCAL_JAR);
-        Path newJar = Paths.get(TEMP_JAR);
+        // Check if the original file exists
+        if (!Files.exists(oldFilePath)) {
+            log.warn("Rename failed since Original file does not exist: " + oldFilePath);
+            return;
+        }
 
-        // Backup old JAR before replacing (optional)
-        Files.move(oldJar, Paths.get(LOCAL_JAR + ".backup"), StandardCopyOption.REPLACE_EXISTING);
+        // Check if a file with the new name already exists
+        if (Files.exists(newFilePath)) {
+            log.error("Rename failed since File with the new name already exists: " + newFilePath);
+            return;
+        }
 
-        // Move new JAR to replace the old one
-        Files.move(newJar, oldJar, StandardCopyOption.REPLACE_EXISTING);
+        try {
+            // Rename the file (move it to the new name)
+            Files.move(oldFilePath, newFilePath, StandardCopyOption.REPLACE_EXISTING);
+            log.info("File renamed successfully from {} to {}", oldFileName, newFileName);
 
-        System.out.println("Update applied successfully!");
+        } catch (IOException e) {
+            // Log the error and rethrow the exception
+            log.error("Failed to rename file: ", e);
+            throw e;
+        }
+
+    }
+
+
+    public void startUpdatedApp(String javaPath, String jarFilePath) throws IOException {
+
+        // Create a process to run the JAR file
+        ProcessBuilder processBuilder = new ProcessBuilder(javaPath, "-jar", jarFilePath);
+
+        try {
+            // Start the process (run the JAR file)
+            Process process = processBuilder.start();
+            log.info("JAR file is starting...");
+
+            // Optionally, you can wait for the process to finish
+//            int exitCode = process.waitFor();
+//            log.info("Process finished with exit code: " + exitCode);
+        } catch (IOException e) {
+            // Handle exceptions
+            log.error("An error occurred while starting the JAR file.");
+            e.printStackTrace();
+        }
+
+
     }
 
 
@@ -57,13 +93,16 @@ public class CheckForUpdate {
 
         // Ensure that the source file exists
         if (!Files.exists(currentLocationPath)) {
-            throw new IOException("Source file does not exist: " + currentLocationPath);
+            log.info("Backup failed since Source file does not exist: " + currentLocationPath);
+            return;
         }
 
         // Ensure that the backup location is valid (e.g., the directory exists)
         if (!Files.exists(backupLocationPath.getParent())) {
             // Create the parent directories if they do not exist
             Files.createDirectories(backupLocationPath.getParent());
+
+            log.info("Directory created : " + backupLocationPath.getParent());
         }
 
         try {
