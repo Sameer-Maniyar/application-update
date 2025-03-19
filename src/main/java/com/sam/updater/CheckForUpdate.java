@@ -240,13 +240,14 @@ public class CheckForUpdate {
     public Boolean checkIfUpdateAvailable() throws JAXBException, IOException {
         UpdateMetaData serverUpdateMetaData = loadCurrentUpdateMetaDataFromServer();
         UpdateMetaData localUpdateMetaData = loadLocalUpdateMetaData();
+        boolean isUpdateAvaialable = !localUpdateMetaData.compare(serverUpdateMetaData);
+        if (localUpdateMetaData == null || serverUpdateMetaData==null) {
 
-        if (localUpdateMetaData == null) {
+            log.info("cannot compare if update available cause loading local update meta data is null or server update meta data is null --- checkIfUpdateAvailable() ");
 
-            log.info("cannot compare if update available cause loading local update meta data is null --- checkIfUpdateAvailable() ");
+            return false;
 
-
-        } else if (!localUpdateMetaData.compare(serverUpdateMetaData)) {
+        } else if (isUpdateAvaialable) {
 
             log.info("New Update available............");
 
@@ -258,7 +259,7 @@ public class CheckForUpdate {
         log.info("Local hash: {}   Server hash:{}", localUpdateMetaData != null ? localUpdateMetaData.getCheckSum() : null, serverUpdateMetaData != null ? serverUpdateMetaData.getCheckSum() : null);
 
 
-        return true;
+        return isUpdateAvaialable;
     }
 
     UpdateMetaData loadCurrentUpdateMetaDataFromServer() {
@@ -343,7 +344,7 @@ public class CheckForUpdate {
             // Example of modifying the Java object (e.g., setting a new attribute)
             if (updateMetaData != null) {
 
-                updateMetaData.setUpdateAvailable(true);
+//                updateMetaData.setUpdateAvailable(true);
 
 
                 log.debug("Updated Product Data: " + updateMetaData);

@@ -12,22 +12,20 @@ public class UpdateMetaData {
     private String versionNumber;
 
     private Boolean isUpdatedJarDownloaded;
-    private Boolean applyUpdate;
-    private Boolean isDownload;
-    private Boolean isUpdateAvailable;
+    private Boolean isUpdatesApplied;
+
 
 
     public UpdateMetaData() {}
 
 
-    public UpdateMetaData(String fileName, String checkSum, String versionNumber, Boolean isUpdatedJarDownloaded, Boolean applyUpdate, Boolean isDownload, Boolean isUpdateAvailable) {
+    public UpdateMetaData(String fileName, String checkSum, String versionNumber, Boolean isUpdatedJarDownloaded, Boolean isUpdatesApplied) {
         this.fileName = fileName;
         this.checkSum = checkSum;
         this.versionNumber = versionNumber;
         this.isUpdatedJarDownloaded = isUpdatedJarDownloaded;
-        this.applyUpdate = applyUpdate;
-        this.isDownload = isDownload;
-        this.isUpdateAvailable = isUpdateAvailable;
+        this.isUpdatesApplied = isUpdatesApplied;
+
     }
 
     @XmlElement
@@ -48,6 +46,7 @@ public class UpdateMetaData {
         this.checkSum = checkSum;
     }
 
+    @XmlElement
     public String getVersionNumber() {
         return versionNumber;
     }
@@ -57,7 +56,7 @@ public class UpdateMetaData {
     }
 
     @XmlElement
-    public Boolean isUpdatedJarDownloaded() {
+    public Boolean getUpdatedJarDownloaded() {
         return isUpdatedJarDownloaded;
     }
 
@@ -66,30 +65,12 @@ public class UpdateMetaData {
     }
 
     @XmlElement
-    public Boolean getApplyUpdate() {
-        return applyUpdate;
+    public Boolean getUpdatesApplied() {
+        return isUpdatesApplied;
     }
 
-    public void setApplyUpdate(Boolean applyUpdate) {
-        this.applyUpdate = applyUpdate;
-    }
-
-    @XmlElement
-    public Boolean isDownload() {
-        return isDownload;
-    }
-
-    public void setDownload(Boolean download) {
-        isDownload = download;
-    }
-
-    @XmlElement
-    public Boolean isUpdateAvailable() {
-        return isUpdateAvailable;
-    }
-
-    public void setUpdateAvailable(Boolean updateAvailable) {
-        isUpdateAvailable = updateAvailable;
+    public void setUpdatesApplied(Boolean updatesApplied) {
+        isUpdatesApplied = updatesApplied;
     }
 
     @Override
@@ -99,9 +80,7 @@ public class UpdateMetaData {
                 ", checkSum='" + checkSum + '\'' +
                 ", versionNumber='" + versionNumber + '\'' +
                 ", isUpdatedJarDownloaded=" + isUpdatedJarDownloaded +
-                ", applyUpdate=" + applyUpdate +
-                ", isDownload=" + isDownload +
-                ", isUpdateAvailable=" + isUpdateAvailable +
+                ", isUpdatesApplied=" + isUpdatesApplied +
                 '}';
     }
 

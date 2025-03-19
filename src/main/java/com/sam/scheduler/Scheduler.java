@@ -25,8 +25,7 @@ public class Scheduler {
                 try {
                     UpdateMetaData updateMetaData = checkForUpdate.loadLocalUpdateMetaData();
 
-                    if(updateMetaData.isDownload()
-                            && updateMetaData.isUpdatedJarDownloaded() && updateMetaData.isUpdateAvailable()){
+                    if(updateMetaData.getUpdatesApplied() ){
 
                     }
 
