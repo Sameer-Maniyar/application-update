@@ -1,4 +1,4 @@
-package com.sam.constants;
+package com.sam.updater;
 
 public interface Constants {
 

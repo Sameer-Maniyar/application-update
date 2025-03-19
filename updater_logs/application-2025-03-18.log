@@ -1,0 +1,69 @@
+2025-03-18 18:27:04[main][INFO ]com.sam.updater.CheckForUpdate-loading  xml file from server URL: http://localhost:9090/updates/product
+2025-03-18 18:27:07[main][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 18:27:07[main][INFO ]com.sam.updater.CheckForUpdate-Application is already up to date.......... 
+2025-03-18 18:27:07[main][INFO ]com.sam.updater.CheckForUpdate-Local hash: 38293698203971db80a890c988a068f6ad3372c53e36c834cd1c0e70179345ba   Server hash:38293698203971db80a890c988a068f6ad3372c53e36c834cd1c0e70179345ba
+2025-03-18 18:27:07[main][INFO ]com.sam.updater.CheckForUpdate-Taking backup: currentLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar, backupLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\bkp\Test2-Updated.jar
+2025-03-18 18:27:07[main][INFO ]com.sam.updater.CheckForUpdate-Backup failed since Source file does not exist: C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar
+2025-03-18 18:27:07[main][WARN ]com.sam.updater.CheckForUpdate-Rename failed since Original file does not exist: C:\Users\vitthals\Desktop\Sameer\Updater\target\old.jar
+2025-03-18 18:27:08[main][INFO ]com.sam.updater.CheckForUpdate-JAR file is starting...
+2025-03-18 18:28:16[main][INFO ]com.sam.updater.CheckForUpdate-Loading local XML file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 18:28:17[main][INFO ]com.sam.updater.CheckForUpdate-XML file updated successfully: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 18:36:12[main][INFO ]com.sam.updater.CheckForUpdate-Loading local XML file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 18:36:12[main][ERROR]com.sam.updater.CheckForUpdate-Error reading the file
+java.nio.file.NoSuchFileException: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:236)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:380)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:432)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:422)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:160)
+	at com.sam.updater.CheckForUpdate.markJarFileDownloadedTrue(CheckForUpdate.java:311)
+	at com.sam.Main.main(Main.java:16)
+2025-03-18 18:36:47[main][INFO ]com.sam.updater.CheckForUpdate-loading  xml file from server URL: http://localhost:9090/updates/product
+2025-03-18 18:36:47[main][ERROR]com.sam.updater.CheckForUpdate-The file does not exist at: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 18:36:47[main][INFO ]com.sam.updater.CheckForUpdate-checking if new updates are available URL: http://localhost:9090/updates/product
+2025-03-18 18:36:47[main][INFO ]com.sam.updater.CheckForUpdate-update xml directory path path:C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 18:36:47[main][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 18:36:47[main][INFO ]com.sam.updater.CheckForUpdate-Application is already up to date.......... 
+2025-03-18 18:36:47[main][INFO ]com.sam.updater.CheckForUpdate-Local hash: 38293698203971db80a890c988a068f6ad3372c53e36c834cd1c0e70179345ba   Server hash:38293698203971db80a890c988a068f6ad3372c53e36c834cd1c0e70179345ba
+2025-03-18 18:36:47[main][INFO ]com.sam.updater.CheckForUpdate-Taking backup: currentLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar, backupLocationPath : C:\Users\vitthals\Desktop\Sameer\Updater\target\bkp\Test2-Updated.jar
+2025-03-18 18:36:47[main][INFO ]com.sam.updater.CheckForUpdate-Backup failed since Source file does not exist: C:\Users\vitthals\Desktop\Sameer\Updater\target\Test2-Updated.jar
+2025-03-18 18:36:47[main][WARN ]com.sam.updater.CheckForUpdate-Rename failed since Original file does not exist: C:\Users\vitthals\Desktop\Sameer\Updater\target\old.jar
+2025-03-18 18:36:47[main][INFO ]com.sam.updater.CheckForUpdate-JAR file is starting...
+2025-03-18 18:40:37[main][INFO ]com.sam.updater.CheckForUpdate-Loading local XML file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 18:40:37[main][INFO ]com.sam.updater.CheckForUpdate-XML file updated successfully: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 18:49:35[main][INFO ]com.sam.updater.CheckForUpdate-Loading local XML file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 18:49:35[main][INFO ]com.sam.updater.CheckForUpdate-XML file updated successfully: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 18:53:02[main][INFO ]com.sam.updater.CheckForUpdate-Loading local XML file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 18:53:02[pool-1-thread-1][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 18:53:02[main][INFO ]com.sam.updater.CheckForUpdate-XML file updated successfully: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 18:53:32[pool-1-thread-1][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 18:54:02[pool-1-thread-1][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 18:54:32[pool-1-thread-1][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 18:55:02[pool-1-thread-1][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 18:55:32[pool-1-thread-1][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 18:56:02[pool-1-thread-1][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 18:56:32[pool-1-thread-1][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 18:57:02[pool-1-thread-1][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 18:57:32[pool-1-thread-1][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 18:58:02[pool-1-thread-1][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 18:58:32[pool-1-thread-1][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 18:59:02[pool-1-thread-1][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 18:59:32[pool-1-thread-1][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 19:00:02[pool-1-thread-1][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 22:34:35[pool-1-thread-1][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 22:34:35[main][INFO ]com.sam.updater.CheckForUpdate-Loading local XML file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 22:34:35[main][INFO ]com.sam.updater.CheckForUpdate-XML file updated successfully: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 22:35:05[pool-1-thread-1][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 22:35:35[pool-1-thread-1][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 22:35:59[pool-1-thread-1][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 22:35:59[main][INFO ]com.sam.updater.CheckForUpdate-Loading local XML file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 22:35:59[main][INFO ]com.sam.updater.CheckForUpdate-XML file updated successfully: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 22:36:29[pool-1-thread-1][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 22:36:59[pool-1-thread-1][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 22:37:29[pool-1-thread-1][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 22:37:59[pool-1-thread-1][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 22:38:29[pool-1-thread-1][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-18 22:38:59[pool-1-thread-1][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml

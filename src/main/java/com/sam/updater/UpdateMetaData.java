@@ -1,4 +1,4 @@
-package com.sam.dto;
+package com.sam.updater;
 
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
@@ -13,18 +13,21 @@ public class UpdateMetaData {
 
     private Boolean isUpdatedJarDownloaded;
     private Boolean applyUpdate;
-    private Boolean download;
+    private Boolean isDownload;
+    private Boolean isUpdateAvailable;
+
 
     public UpdateMetaData() {}
 
 
-    public UpdateMetaData(String fileName, String checkSum, String versionNumber, Boolean isUpdatedJarDownloaded, Boolean applyUpdate, Boolean download) {
+    public UpdateMetaData(String fileName, String checkSum, String versionNumber, Boolean isUpdatedJarDownloaded, Boolean applyUpdate, Boolean isDownload, Boolean isUpdateAvailable) {
         this.fileName = fileName;
         this.checkSum = checkSum;
         this.versionNumber = versionNumber;
         this.isUpdatedJarDownloaded = isUpdatedJarDownloaded;
         this.applyUpdate = applyUpdate;
-        this.download = download;
+        this.isDownload = isDownload;
+        this.isUpdateAvailable = isUpdateAvailable;
     }
 
     @XmlElement
@@ -45,7 +48,6 @@ public class UpdateMetaData {
         this.checkSum = checkSum;
     }
 
-    @XmlElement
     public String getVersionNumber() {
         return versionNumber;
     }
@@ -54,9 +56,8 @@ public class UpdateMetaData {
         this.versionNumber = versionNumber;
     }
 
-
     @XmlElement
-    public Boolean getUpdatedJarDownloaded() {
+    public Boolean isUpdatedJarDownloaded() {
         return isUpdatedJarDownloaded;
     }
 
@@ -74,14 +75,22 @@ public class UpdateMetaData {
     }
 
     @XmlElement
-    public Boolean getDownload() {
-        return download;
+    public Boolean isDownload() {
+        return isDownload;
     }
 
     public void setDownload(Boolean download) {
-        this.download = download;
+        isDownload = download;
     }
 
+    @XmlElement
+    public Boolean isUpdateAvailable() {
+        return isUpdateAvailable;
+    }
+
+    public void setUpdateAvailable(Boolean updateAvailable) {
+        isUpdateAvailable = updateAvailable;
+    }
 
     @Override
     public String toString() {
@@ -91,7 +100,8 @@ public class UpdateMetaData {
                 ", versionNumber='" + versionNumber + '\'' +
                 ", isUpdatedJarDownloaded=" + isUpdatedJarDownloaded +
                 ", applyUpdate=" + applyUpdate +
-                ", download=" + download +
+                ", isDownload=" + isDownload +
+                ", isUpdateAvailable=" + isUpdateAvailable +
                 '}';
     }
 
