@@ -1766,3 +1766,12 @@ java.nio.file.NoSuchFileException: C:\Users\vitthals\Desktop\Sameer\Updater\targ
 2025-03-19 13:22:44[main][ERROR]com.sam.updater.CheckForUpdate-connection refused check if server is down or something
 2025-03-19 13:22:44[main][INFO ]com.sam.updater.CheckForUpdate-cannot compare if update available cause loading local update meta data is null --- checkIfUpdateAvailable() 
 2025-03-19 13:22:44[main][INFO ]com.sam.updater.CheckForUpdate-Local hash: null   Server hash:null
+2025-03-19 21:38:34[main][INFO ]com.sam.updater.CheckForUpdate-loading  xml file from server URL: http://localhost:9090/updates/product
+2025-03-19 21:38:34[main][ERROR]com.sam.updater.CheckForUpdate-loading of local update meta data started
+2025-03-19 21:38:34[main][ERROR]com.sam.updater.CheckForUpdate-The file does not exist at: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-19 21:38:34[main][INFO ]com.sam.updater.CheckForUpdate-downloading Xml File From Server URL : http://localhost:9090/updates/product
+2025-03-19 21:38:34[main][INFO ]com.sam.updater.CheckForUpdate-Created missing directories at: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData
+2025-03-19 21:38:34[main][INFO ]com.sam.updater.CheckForUpdate-update xml directory path path:C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-19 21:38:34[main][INFO ]com.sam.updater.CheckForUpdate-loading local xml file from directory: C:\Users\vitthals\Desktop\Sameer\Updater\target\MetaData\update_meta_data.xml
+2025-03-19 21:38:34[main][INFO ]com.sam.updater.CheckForUpdate-Application is already up to date.......... 
+2025-03-19 21:38:34[main][INFO ]com.sam.updater.CheckForUpdate-Local hash: 38293698203971db80a890c988a068f6ad3372c53e36c834cd1c0e70179345ba   Server hash:38293698203971db80a890c988a068f6ad3372c53e36c834cd1c0e70179345ba

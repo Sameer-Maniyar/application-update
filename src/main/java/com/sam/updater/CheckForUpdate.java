@@ -31,37 +31,10 @@ public class CheckForUpdate {
     }
 
 
-    public void renameUpdatedApp(String currentLocation, String oldFileName, String newFileName) throws IOException {
-        Path oldFilePath = Paths.get(currentLocation, oldFileName);
-        Path newFilePath = Paths.get(currentLocation, newFileName);
-
-        // Check if the original file exists
-        if (!Files.exists(oldFilePath)) {
-            log.warn("Rename failed since Original file does not exist: " + oldFilePath);
-            return;
-        }
-
-        // Check if a file with the new name already exists
-        if (Files.exists(newFilePath)) {
-            log.error("Rename failed since File with the new name already exists: " + newFilePath);
-            return;
-        }
-
-        try {
-            // Rename the file (move it to the new name)
-            Files.move(oldFilePath, newFilePath, StandardCopyOption.REPLACE_EXISTING);
-            log.info("File renamed successfully from {} to {}", oldFileName, newFileName);
-
-        } catch (IOException e) {
-            // Log the error and rethrow the exception
-            log.error("Failed to rename file: ", e);
-            throw e;
-        }
-
-    }
 
 
-    public void startUpdatedApp(String javaPath, String jarFilePath) throws IOException {
+
+    public void startUpdateApplier(String javaPath, String jarFilePath) throws IOException {
 
         // Create a process to run the JAR file
         ProcessBuilder processBuilder = new ProcessBuilder(javaPath, "-jar", jarFilePath);
@@ -83,41 +56,6 @@ public class CheckForUpdate {
 
     }
 
-
-    public void takeBackup(String currentLocation, String backupLocation, String fileName) throws IOException {
-        // Create Path objects for the current file and the backup location
-        Path currentLocationPath = Paths.get(currentLocation, fileName);
-        Path backupLocationPath = Paths.get(backupLocation, fileName);
-
-        // Log the backup operation
-        log.info("Taking backup: currentLocationPath : {}, backupLocationPath : {}", currentLocationPath, backupLocationPath);
-
-        // Ensure that the source file exists
-        if (!Files.exists(currentLocationPath)) {
-            log.info("Backup failed since Source file does not exist: " + currentLocationPath);
-            return;
-        }
-
-        // Ensure that the backup location is valid (e.g., the directory exists)
-        if (!Files.exists(backupLocationPath.getParent())) {
-            // Create the parent directories if they do not exist
-            Files.createDirectories(backupLocationPath.getParent());
-
-            log.info("Directory created : " + backupLocationPath.getParent());
-        }
-
-        try {
-            // Backup old file before replacing
-            Files.move(currentLocationPath, backupLocationPath, StandardCopyOption.REPLACE_EXISTING);
-            log.info("Backup is successful...");
-        } catch (IOException e) {
-            // Log any error that occurs during backup
-            log.error("Backup failed due to error: ", e);
-            throw e;  // Rethrow the exception to propagate it
-        }
-
-
-    }
 
 
     public Boolean downloadXmlFileFromServer() {
@@ -329,7 +267,7 @@ public class CheckForUpdate {
     }
 
 
-    public UpdateMetaData markUpdateIsAvailableAsTrue() throws JAXBException, IOException {
+    public UpdateMetaData markUpdateApplied() throws JAXBException, IOException {
         UpdateMetaData updateMetaData = null;
         Path parentDir = Path.of(DirectoryUtil.getCurrentDirectory(), UPDATE_METADATA_FOLDER_PATH, XML_FILE_NAME);
 
@@ -344,7 +282,7 @@ public class CheckForUpdate {
             // Example of modifying the Java object (e.g., setting a new attribute)
             if (updateMetaData != null) {
 
-//                updateMetaData.setUpdateAvailable(true);
+                updateMetaData.setUpdatesApplied(true);
 
 
                 log.debug("Updated Product Data: " + updateMetaData);
