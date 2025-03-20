@@ -24,11 +24,11 @@ public class CheckForUpdate {
     private final String UPDATE_METADATA_FOLDER_PATH = "MetaData";
     private final String XML_FILE_NAME = "update_meta_data.xml";
 
-    void startDownload(Stage stage1) {
-        FileDownloadTask fileDownloadTask = new FileDownloadTask("https://github.com/Sameer-Maniyar/application-update/archive/refs/heads/main.zip", "C:\\Users\\sameermaniyar\\Desktop\\bkp", stage1);
-        new Thread(fileDownloadTask).start();
-//        progressBar.progressProperty().bind(fileDownloadTask.progressProperty());
-    }
+//    void startDownload(Stage stage1) {
+//        FileDownloadTask fileDownloadTask = new FileDownloadTask("https://github.com/Sameer-Maniyar/application-update/archive/refs/heads/main.zip", "C:\\Users\\sameermaniyar\\Desktop\\bkp", stage1);
+//        new Thread(fileDownloadTask).start();
+////        progressBar.progressProperty().bind(fileDownloadTask.progressProperty());
+//    }
 
 
 
@@ -284,6 +284,46 @@ public class CheckForUpdate {
 
                 updateMetaData.setUpdatesApplied(true);
 
+
+                log.debug("Updated Product Data: " + updateMetaData);
+            }
+        } catch (JAXBException e) {
+            log.error("Error during unmarshalling", e);
+            throw e;
+        } catch (IOException e) {
+            log.error("Error reading the file", e);
+            throw e;
+        }
+
+        // After making the changes, save the updated object back to XML
+        saveUpdatedXml(updateMetaData, parentDir);
+
+        return updateMetaData;
+    }
+
+
+    public UpdateMetaData markUpdateDownloaded() throws JAXBException, IOException {
+        UpdateMetaData updateMetaData = null;
+        Path parentDir = Path.of(DirectoryUtil.getCurrentDirectory(), UPDATE_METADATA_FOLDER_PATH, XML_FILE_NAME);
+
+        log.info("Loading local XML file from directory: {}", parentDir);
+
+        try (InputStream inputStream = Files.newInputStream(parentDir)) {
+            // JAXB unmarshalling
+            JAXBContext jaxbContext = JAXBContext.newInstance(UpdateMetaData.class);
+            Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+            updateMetaData = (UpdateMetaData) unmarshaller.unmarshal(inputStream);  // Unmarshalling XML to Java object
+
+            // Example of modifying the Java object (e.g., setting a new attribute)
+            if (updateMetaData != null) {
+
+                UpdateMetaData updateMetaData1 = loadCurrentUpdateMetaDataFromServer();
+
+                updateMetaData.setUpdatedJarDownloaded(true);
+                updateMetaData.setUpdatesApplied(false);
+                updateMetaData.setCheckSum(updateMetaData1.getCheckSum());
+                updateMetaData.setFileName(updateMetaData1.getFileName());
+                updateMetaData.setVersionNumber(updateMetaData1.getVersionNumber());
 
                 log.debug("Updated Product Data: " + updateMetaData);
             }
